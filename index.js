@@ -11,42 +11,40 @@ var WeekNum = 0;
 document.open();
 //以下、日付と対応した書き込みを行う
 //読めばわかる
-for (var i = 1; i <= GetumatuDate; i++) {
-  today.setDate(i);
-  if (i == 1) {
-    if (dateT[today.getDay()] != "日") {
-      document.write(
-        "#" + (today.getMonth() + 1) + "月" + WeekNum + "W" + "<br>"
-      );
-      document.write(
-        "[[" +
-          (today.getMonth() + 1) +
-          "/" +
-          today.getDate() +
-          "(" +
-          dateT[today.getDay()] +
-          ")]]" +
-          "<br>"
-      );
-    }
-  } else {
-    if (dateT[today.getDay()] == "日") {
-      WeekNum = WeekNum + 1;
-      document.write(
-        "#" + (today.getMonth() + 1) + "月" + WeekNum + "W" + "<br>"
-      );
-    }
 
+today.setDate(1);
+if (dateT[today.getDay()] == "日") {
+  WeekNum = WeekNum + 1;
+}
+document.write("#" + (today.getMonth() + 1) + "月" + WeekNum + "W" + "<br>");
+document.write(
+  "[[" +
+    (today.getMonth() + 1) +
+    "/" +
+    today.getDate() +
+    "(" +
+    dateT[today.getDay()] +
+    ")]]" +
+    "<br>"
+);
+for (var i = 2; i <= GetumatuDate; i++) {
+  today.setDate(i);
+  if (dateT[today.getDay()] == "日") {
+    WeekNum = WeekNum + 1;
     document.write(
-      "[[" +
-        (today.getMonth() + 1) +
-        "/" +
-        today.getDate() +
-        "(" +
-        dateT[today.getDay()] +
-        ")]]" +
-        "<br>"
+      "#" + (today.getMonth() + 1) + "月" + WeekNum + "W" + "<br>"
     );
   }
+
+  document.write(
+    "[[" +
+      (today.getMonth() + 1) +
+      "/" +
+      today.getDate() +
+      "(" +
+      dateT[today.getDay()] +
+      ")]]" +
+      "<br>"
+  );
 }
 document.close();
