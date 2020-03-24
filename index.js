@@ -1,14 +1,16 @@
-//今日のデータ
+//今日の日付
 var today = new Date();
-//今月の月末日を取得する．
+//今月の月末日を今日の日付から計算．
 var Getumatu = new Date(today.getFullYear(), today.getMonth() + 1, 0);
 var GetumatuDate = Getumatu.getDate();
-//0~6の曜日変換用
+//曜日変換用配列
 dateT = ["日", "月", "火", "水", "木", "金", "土"];
 //何周目かの初期値を入れるため，月初に設定
 var WeekNum = 0;
+//書き込むドキュメントを開く
 document.open();
-document.write("in");
+//以下、日付と対応した書き込みを行う
+//読めばわかる
 for (var i = 1; i <= GetumatuDate; i++) {
   today.setDate(i);
   if (i == 1) {
