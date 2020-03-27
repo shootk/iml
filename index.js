@@ -4,7 +4,7 @@ var today = new Date();
 var endOfMonth = new Date(today.getFullYear(), today.getMonth() + 1, 0);
 var endOfMonthDate = endOfMonth.getDate();
 //曜日変換用配列
-dayTable = ["日", "月", "火", "水", "木", "金", "土"];
+dayTable = ["日", "月", "火", "水", "木you", "金", "土"];
 //何周目かの初期値を入れるため，月初に設定
 var weekNum = 0;
 //書き込むドキュメントを開く
