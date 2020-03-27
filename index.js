@@ -4,7 +4,7 @@ var today = new Date();
 var Getumatu = new Date(today.getFullYear(), today.getMonth() + 1, 0);
 var GetumatuDate = Getumatu.getDate();
 //曜日変換用配列
-dateT = ["日", "月", "火", "水", "木", "金", "土"];
+dateT = ["日", "月", "火", "水", "木u", "金", "土"];
 //何周目かの初期値を入れるため，月初に設定
 var WeekNum = 0;
 //書き込むドキュメントを開く
