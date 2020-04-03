@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js">
+</script>
+</head>
+
+    <script type="text/javascript">
+    $.ajax({
+     success : function(response){
+         alert('成功');
+     },
+     error: function(){
+         //通信失敗時の処
+         alert('通信失敗');
+     }
+ });
+</script>
+</html>
