@@ -16,17 +16,17 @@ today.setDate(1);
 document.write("#" + (today.getMonth() + 1) + "月" + weekNum + "W" + "<br>");
 document.write(
   "[[" +
-    (today.getMonth() + 1) +
-    "/" +
-    today.getDate() +
-    "(" +
-    dateTable[today.getDay()] +
-    ")]]" +
-    "<br>"
+  (today.getMonth() + 1) +
+  "/" +
+  today.getDate() +
+  "(" +
+  dayTable[today.getDay()] +
+  ")]]" +
+  "<br>"
 );
 for (var i = 2; i <= endOfMonthDate; i++) {
   today.setDate(i);
-  if (dateTable[today.getDay()] == "日") {
+  if (dayTable[today.getDay()] == "日") {
     weekNum = weekNum + 1;
     document.write(
       "#" + (today.getMonth() + 1) + "月" + weekNum + "W" + "<br>"
@@ -35,13 +35,13 @@ for (var i = 2; i <= endOfMonthDate; i++) {
 
   document.write(
     "[[" +
-      (today.getMonth() + 1) +
-      "/" +
-      today.getDate() +
-      "(" +
-      dateTable[today.getDay()] +
-      ")]]" +
-      "<br>"
+    (today.getMonth() + 1) +
+    "/" +
+    today.getDate() +
+    "(" +
+    dayTable[today.getDay()] +
+    ")]]" +
+    "<br>"
   );
 }
 document.close();
