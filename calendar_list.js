@@ -5,6 +5,7 @@ var endOfMonth = new Date(today.getFullYear(), today.getMonth() + 1, 0);
 var endOfMonthDate = endOfMonth.getDate();
 //曜日変換用配列
 dayTable = ["月", "火", "水", "木", "金", "土", "日"];
+var link_head = "https://scrapbox.io/IML/"
 //何周目かの初期値を入れるため，月初に設定
 var weekNum = 0;
 //書き込むドキュメントを開く
@@ -15,7 +16,12 @@ document.open();
 today.setDate(1);
 if (dayTable[today.getDay()] == "月") {
     weekNum += 1;}
-document.write("#" + (today.getMonth() + 1) + "月" + weekNum + "W" + "<br>");
+document.write(
+"|                                "
++"[/ "+today.getFullYear()+"/"+today.getMonth()+"]"
++"	                             |"
++"| [[Mon]] |  [[Tue]] | [[Wed]] |  [[Thu]] |   [[Fri]]  |  [[Sat]]  |  [[Sun]] |" + "<br>");
+
 document.write(
     "[[" +
     (today.getMonth() + 1) +
